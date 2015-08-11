@@ -1,8 +1,7 @@
 # Base
 FROM ubuntu:14.04
 
-RUN sed -i 's/archive.ubuntu.com/cn.archive.ubuntu.com/' /etc/apt/sources.list \
-  && apt-get update \
+RUN apt-get update \
   && apt-get install -y \
   wget \
   build-essential \
