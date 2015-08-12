@@ -12,6 +12,6 @@ RUN apt-get update \
   libreadline-dev \
   libssl-dev
 
-RUN wget -qO- https://github.com/git/git/archive/v2.5.0.tar.gz | tar xvz -C git-2.5.0
+RUN wget -qO- https://github.com/git/git/archive/v2.5.0.tar.gz | tar xvz
 
 RUN cd git-2.5.0 && autoconf && ./configure --without-tcltk && make && make install && ln -s /usr/local/bin/git /usr/bin/git
