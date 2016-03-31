@@ -12,9 +12,9 @@ RUN apt-get update \
   libreadline-dev \
   libssl-dev
 
-RUN wget -qO- https://github.com/git/git/archive/v2.7.4.tar.gz | tar xvz
+RUN wget -qO- https://github.com/git/git/archive/v2.8.0.tar.gz | tar xvz
 
-RUN cd git-2.7.4 && autoconf && ./configure --without-tcltk && make && make install && ln -s /usr/local/bin/git /usr/bin/git
+RUN cd git-2.8.0 && autoconf && ./configure --without-tcltk && make && make install && ln -s /usr/local/bin/git /usr/bin/git
 
 RUN ln -s /usr/local/bin/git-upload-pack /usr/bin/git-upload-pack
 RUN ln -s /usr/local/bin/git-receive-pack /usr/bin/git-receive-pack
